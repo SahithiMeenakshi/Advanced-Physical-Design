@@ -20,20 +20,20 @@ More details on sky130 PDK can be obtained [here](https://github.com/google/skyw
 
 The Backend flow is transforms the RTL circuit description into a physical design,composed by gates and its interconnections.The below flow chart gives a better picture of physical design flow.
   * Synthesis - During synthesis the RTL description is converted into a structural gate level based netlist which instantiates standard cells and macros that compose the circuit and its connections.In this step,Translation + Optimization + Mapping are performed.
+ 
   * Floor/Power Planning - During this step, 1) Width and height of core, Die are defined
-  
                                              2) Location of preplaced cells is defined and these cells are surrounded with Decoupling capacitors
-                                             
                                              3) Multiple VDD ,VSS lines are defined
-                                             
                                              4) Pin placement, logical cell placement blockage is done
                                              
   * Placement - During this step, netlist is binded with physical cells and these are placed on floorplan rows aligned with the sites.
+  
   * Clock Tree Synthesis - During this step, a clock distribution network is created to deliver clock to all the sequential elements with minimum skew.
+  
   * Routing - During this step, interconnects are implemented using available metal layers , routing grid is formed using metal tracks.Routing is done in two stages                                       1) Global routing - Generates Routing guides 
-                                             
                                              2) Detailed routing - This routes within the proprocessed route guides provided from Global routing step
     So routing basically finds out the best possible connection between two end points ,one being the source and the other being target. 
+  
   * Sign Off - During this step, Physical verifications like Design Rule Check(DRC), Layout Versus Schematic(LVS) and Timing verification like Static Timing Analysis(STA) are done.
   
   The below flow chart provides a better picture of Openlane flow as a whole.
