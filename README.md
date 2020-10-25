@@ -60,3 +60,8 @@ The below flow chart provides a better picture of Openlane flow as a whole.[(Ima
 
 ### Opensource Tools
 
+Below are the stages and respective tools called by openlane during the flow :
+
+* Synthesis
+  * Generates gate-level netlist `yosys`
+
