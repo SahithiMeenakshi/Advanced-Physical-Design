@@ -12,6 +12,7 @@ This repository contains all the information needed on SoC design planning in Op
 - [Build your Design in openlane ](#build-your-design-in-openlane)
   - [Preparation](#preparation)
   - [Synthesis](#synthesis)
+  - [Floorplan](#floorplan)
 - [Acknowledgements](#acknowledgements)
 
 # Introduction to Openlane and sky130 PDK
@@ -168,3 +169,30 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  <div align="center">
   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/reports_after_synthesis.png' alt='Reports after synthesis stage'/>
  </div>
+
+## Floorplan
+
+ * Before proceeding , lets see the changes in config files when Floorplan switches are modified in the flow. To know more about switches at each stage, go to openlane_working_dir-->openLANE_flow-->configuration-->README.md file.
+ * Below image shows the floorplan switches from openlane flow configuration file(default) which has less priority.
+ 
+ <div align="center">
+  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/floorplan_defaults.png' alt='Default floorplan switches'/>
+ </div>
+ 
+ * Now set the horizontal,vertical metal layer switches to some values (3,4 respectively in example taken here) using the following commands in the design specific config file.
+ 
+   `set ::env(FP_IO_HMETAL) 3`
+   `set ::env(FP_IO_VMETAL) 4`
+ 
+ * Now run the floorplan step using the following command.
+ 
+   `run_floorplan`
+   
+ * Now check whether the changes are incorporated in the flow by observing the design specific floorplan log file.Below is the snapshot indicating changes in the vertical,horizontal metal layer information.
+ 
+ <div align="center">
+  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/override_defaults.png' alt='Overriding Default floorplan switches'/>
+ </div>
+ 
+ * So above indicates that default openlane configuration parameters have been overridden by parameters that are included in design specific config file.
+ 
