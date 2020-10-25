@@ -14,6 +14,7 @@ This repository contains all the information needed on SoC design planning in Op
   - [Synthesis](#synthesis)
   - [Floorplan](#floorplan)
   - [Placement](#placement)
+- [Standard cell design & characterization](#[standard-cell-design-&-characterization)
 - [Acknowledgements](#acknowledgements)
 
 # Introduction to Openlane and sky130 PDK
@@ -206,7 +207,8 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  
    `magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &`
   
- * If Input ouput pin mode is set as '1' ,pins are placed at random but at equidistant points. If I/O mode is set to 2 using `set ::env(FP_IO_MODE) 2` and then floorplan step is run again, now in the layout after Floorplan stage pins are seen not being equidistant rather they are stacked upon one another. Below snapshot shows this scenario.
+ * If Input ouput pin mode is set as '1' ,pins are placed at random but at equidistant points.
+ * If I/O mode is set to 2 using `set ::env(FP_IO_MODE) 2` and then floorplan step is run again, now in the layout after Floorplan stage pins are seen not being equidistant rather they are stacked upon one another. Below snapshot shows this scenario.
  
  <div align="center">
   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/io_mode2.png' alt='I/O mode as 2'/>
@@ -233,6 +235,17 @@ Detailed description on how to build and invoke openlane is given [here](https:/
   <div align="center">
    <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/placement_layout.png' alt='Layout after Placement'/>
   </div>
+
+# Standard cell design & characterization
+
+ * Clone the following [link](https://github.com/nickson-jose/vsdstdcelldesign) into openLANE_flow directory which contains custom made .mag inverter file and also pmos,nmos sky130 spice models.
+ 
+ * Launch Magic from vsdstdcelldesign location using the command `magic -T sky130.tech sky130_inv.mag &`
+ * To extract parasitic capacitances, first do `extract all` and then `ext2spice cthresh 0 rthresh 0` to extract parasitic capacitances and finally `ext2spice`.Below is the snapshot of all these steps.
+ 
+ <div align="center">
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/inverter_layout.png' alt='Inverter Layout'/>
+ </div>
  
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
