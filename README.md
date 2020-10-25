@@ -163,4 +163,8 @@ Detailed description on how to build and invoke openlane is given [here](https:/
   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/synthesis.png' alt='After synthesis stage'/>
  </div>
  
- hj
+ * Below image shows the reports that are generated after synthesis step.
+ 
+ <div align="center">
+  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/reports_after_synthesis.png' alt='Reports after synthesis stage'/>
+ </div>
