@@ -206,7 +206,11 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  
    `magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &`
   
- * If Input ouput pin mode is set as '1' ,pins are placed at random but at equidistant points.
+ * If Input ouput pin mode is set as '1' ,pins are placed at random but at equidistant points. If I/O mode is set to 2 using `set ::env(FP_IO_MODE) 2` and then floorplan step is run again, now in the layout after Floorplan stage pins are seen not being equidistant rather they are stacked upon one another. Below snapshot shows this scenario.
+ 
+ <div align="center">
+  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/io_mode2.png' alt='I/O mode as 2'/>
+ </div>
  
 ## Placement
 
