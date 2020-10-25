@@ -89,5 +89,9 @@ Detailed description on how to build and invoke openlane is given [here](https:/
 
 # openLANE Output
 
-Any output run data is placed by default under ./designs/design_name/runs folder. Each flow cycle will output timestamp-marked folder which contains the following files.
+Any output run data is placed by default under ./designs/design_name/runs folder. Each flow cycle will output timestamp-marked folder which contains the following files.The below picture lists all the files.
+
+<div align="center">
+ <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/output_file.png' alt='Output files structure'/>
+</div>
 
