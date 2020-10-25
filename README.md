@@ -5,6 +5,7 @@ This repository contains all the information needed on SoC design planning in Op
 # Table of Contents
 - [Introduction to Openlane and sky130 PDK](#introduction-to-openlane-and-sky130-pdk)
 - [Overview of Physical Design Flow](#overview-of-physical-design-flow)
+- [Introduction to Openlane Flow](#introduction-to-openlane-flow)
 - [Acknowledgements](#acknowledgements)
 
 # Introduction to Openlane and sky130 PDK
@@ -41,8 +42,10 @@ The below flow chart gives a better picture of physical design flow.
     So routing basically finds out the best possible connection between two end points ,one being the source and the other being target. 
   
   * Sign Off - During this step, Physical verifications like Design Rule Check(DRC), Layout Versus Schematic(LVS) and Timing verification like Static Timing Analysis(STA) are done.
+ 
+# Introduction to Openlane Flow
   
-  The below flow chart provides a better picture of Openlane flow as a whole.
+The below flow chart provides a better picture of Openlane flow as a whole.
   
 <div align="center">
  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/openlane_flow.png' alt='Openlane Flow'/>
