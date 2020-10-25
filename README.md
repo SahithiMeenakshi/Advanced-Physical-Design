@@ -43,4 +43,7 @@ The below flow chart gives a better picture of physical design flow.
   * Sign Off - During this step, Physical verifications like Design Rule Check(DRC), Layout Versus Schematic(LVS) and Timing verification like Static Timing Analysis(STA) are done.
   
   The below flow chart provides a better picture of Openlane flow as a whole.
-        
+  
+<div align="center">
+ <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/openlane_flow.png' alt='Openlane Flow'/>
+</div>
