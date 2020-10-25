@@ -13,6 +13,7 @@ This repository contains all the information needed on SoC design planning in Op
   - [Preparation](#preparation)
   - [Synthesis](#synthesis)
   - [Floorplan](#floorplan)
+  - [Placement](#placement)
 - [Acknowledgements](#acknowledgements)
 
 # Introduction to Openlane and sky130 PDK
@@ -205,12 +206,24 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  
    `magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &`
   
- * As Input ouput pin mode is set as '1' ,pins areplaced at random but at equidistant points.This can be seen in below snapshot. 
+ * As Input ouput pin mode is set as '1' ,pins are placed at random but at equidistant points.This can be seen in below snapshot. 
  
  <div align="center">
   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/floorplan_layout.png' alt='Layout after floorplan'/>
  </div>
 
+## Placement
+
+  * Run the placement step using the following command.
+  
+    `run_placement`
+    
+  * For the design to converge, as number of iterations increases overflow(OVFL) should decrease.Below is the snapshot after the Placement stage.
+  
+  <div align="center">
+  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/placement.png' alt='placement stage'/>
+ </div>
+ 
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
 - [Nickson Jose](https://github.com/nickson-jose)
