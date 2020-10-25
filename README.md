@@ -197,7 +197,7 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  </div>
  
  * So above indicates that default openlane configuration parameters have been overridden by parameters that are included in design specific config file.
- * Below snapshot shows the die area after the floorplan step in which the coordinates can be read as(Lower left X value, Lower left Y value)(Upper right X value, Uower right Y value).
+ * Below snapshot shows the die area after the floorplan step in which the coordinates can be read as(Lower left X value, Lower left Y value)(Upper right X value, Upper right Y value).
  
  <div align="center">
   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/die_area.png' alt='Die area after floorplan'/>
