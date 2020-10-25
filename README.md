@@ -137,10 +137,28 @@ Detailed description on how to build and invoke openlane is given [here](https:/
   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/preparation.png' alt='preparation step'/>
  </div>
  
- * Now  '<time-stamp>' or '<tag>' folder is created under 'runs' directory which contains results,reports,logs of each stage.
+ * Now time-stamp or tag folder is created under 'runs' directory which contains results,reports,logs of each stage.
   
 ## Synthesis
 
- * Now run the synthesis using the command
+ * Now run the synthesis step using the command:
  
    `run_synthesis`
+   
+ * Below image shows the statistics before mapping.
+ 
+ <div align="center">
+  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/before_mapping.png' alt='Before Mapping stage'/>
+ </div>
+ 
+ * Below images show the statistics after mapping and synthesis is done.
+ 
+ <div align="center">
+  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/before_mapping.png' alt='After Mapping stage'/>
+ </div>
+ <div align="center">
+  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/area_after_synthesis.png' alt='After synthesis stage'/>
+ </div>
+ <div align="center">
+  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/synthesis.png' alt='After synthesis stage'/>
+ </div>
