@@ -86,3 +86,8 @@ Below are the stages and respective tools called by openlane during the flow :
 # Build and Invoke Openlane 
 
 Detailed description on how to build and invoke openlane is given [here](https://github.com/nickson-jose/openlane_build_script).
+
+# openLANE Output
+
+Any output run data is placed by default under ./designs/design_name/runs folder. Each flow cycle will output timestamp-marked folder which contains the following files.
+
