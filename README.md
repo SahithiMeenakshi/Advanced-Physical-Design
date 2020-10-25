@@ -6,9 +6,12 @@ This repository contains all the information needed on SoC design planning in Op
 - [Introduction to Openlane and sky130 PDK](#introduction-to-openlane-and-sky130-pdk)
 - [Overview of Physical Design Flow](#overview-of-physical-design-flow)
 - [Introduction to Openlane Flow](#introduction-to-openlane-flow)
-  - [Opensource Tools](#opensource-tools)
+  - [Opensource Tools at each step](#opensource-tools-at-each-step)
 - [Build and Invoke Openlane](#build-and-invoke-openlane)
 - [openlane Directory structure](#openlane-directory-structure)
+- [Build your Design in openlane ](#build-your-design-in-openlane)
+  - [Preparation](#preparation)
+  - [Synthesis](#synthesis)
 - [Acknowledgements](#acknowledgements)
 
 # Introduction to Openlane and sky130 PDK
@@ -60,7 +63,7 @@ The below flow chart provides a better picture of Openlane flow as a whole.[(Ima
  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/openlane_flow.png' alt='Openlane Flow'/>
 </div>
 
-## Opensource Tools
+## Opensource Tools at each step
 
 Below are the stages and respective tools called by openlane during the flow :
 
@@ -103,3 +106,27 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/output_file.png' alt='Output files structure'/>
 </div>
 
+# Build your Design in openlane
+
+ * Invoke openlane and run the script file in an intercative (step by step)mode.
+   `./flow.tcl -interactive`
+ * Input the packages needed to run this flow
+   `package require openlane 0.9
+ * Below image shows the terminal after openlane being invoked.
+ 
+ <div align="center">
+  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/invoke_openlane.png' alt='Invoking openlane'/>
+ </div>
+ 
+## Preparation
+
+ * openlane has close to 30-40 designs, of which one can select any design and run it. 'picorv32a' design is chosen here for example.
+ * Any design comprises of files such as 'src' which contains verilog netlist(.v file) , constraints(.sdc) file and 'config.tcl' which is specific to design. 
+ * Design specific config.tcl file overrides the parameter values which are from default openlane flow configuration file.
+ * Now design setup stage is to be done so that a seperate filesystem is created specific to the flow
+   `prep -design picorv32a`
+ * After preparation step is done:
+ 
+ <div align="center">
+  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/preparation.png' alt='preparation step'/>
+ </div>
