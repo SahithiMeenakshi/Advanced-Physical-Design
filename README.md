@@ -154,7 +154,7 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  * Below images show the statistics after mapping and synthesis is done.
  
  <div align="center">
-  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/before_mapping.png' alt='After Mapping stage'/>
+  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/after_mapping.png' alt='After Mapping stage'/>
  </div>
  <div align="center">
   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/area_after_synthesis.png' alt='After synthesis stage'/>
