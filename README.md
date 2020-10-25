@@ -95,7 +95,7 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/pdk_flow.png' alt='PDK directory structure'/>
 </div>
 
-libs.ref file contents are specific to technology whereas libs.tech file contents are specific to tool.While implementing this physical design flow, `Sky130 nm` technology node ,`sky130_fd_sc_hd` standard cell library are used.
+ * libs.ref file contents are specific to technology whereas libs.tech file contents are specific to tool.While implementing this physical design flow, `Sky130 nm` technology node ,`sky130_fd_sc_hd` standard cell library are used.
 
  * Any output run data is placed by default under ./designs/design_name/runs folder. Each flow cycle will output timestamp-marked folder which contains the following files.The below picture lists all the files.
 
