@@ -206,23 +206,29 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  
    `magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &`
   
- * As Input ouput pin mode is set as '1' ,pins are placed at random but at equidistant points.This can be seen in below snapshot. 
+ * If Input ouput pin mode is set as '1' ,pins are placed at random but at equidistant points.
  
- <div align="center">
-  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/floorplan_layout.png' alt='Layout after floorplan'/>
- </div>
-
 ## Placement
 
-  * Run the placement step using the following command.
+ * Run the placement step using the following command.
   
     `run_placement`
     
-  * For the design to converge, as number of iterations increases overflow(OVFL) should decrease.Below is the snapshot after the Placement stage.
+ * For the design to converge, as number of iterations increases overflow(OVFL) should decrease.Below is the snapshot after the Placement stage.
   
   <div align="center">
-  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/placement.png' alt='placement stage'/>
- </div>
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/placement.png' alt='placement stage'/>
+  </div>
+  
+ * To see the Layout after Placement stage ,launch Magic from designs/picorv32a/runs/timestamp of recent run/results/placement location. Magic tech file, lef file,def file are read to display the layout using the following command.
+  
+   `magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &`
+ 
+ * Below image shows the layout after placement stage.
+ 
+  <div align="center">
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/placement_layout.png' alt='Layout after Placement'/>
+  </div>
  
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
