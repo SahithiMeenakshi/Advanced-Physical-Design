@@ -58,5 +58,5 @@ The below flow chart provides a better picture of Openlane flow as a whole.[(Ima
  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/openlane_flow.png' alt='Openlane Flow'/>
 </div>
 
-###### [Opensource Tools]
+### Opensource Tools
 
