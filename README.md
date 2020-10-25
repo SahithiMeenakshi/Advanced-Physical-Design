@@ -7,6 +7,7 @@ This repository contains all the information needed on SoC design planning in Op
 - [Overview of Physical Design Flow](#overview-of-physical-design-flow)
 - [Introduction to Openlane Flow](#introduction-to-openlane-flow)
   - [Opensource Tools](#opensource-tools)
+- [Build and Invoke Openlane](#build-and-invoke-openlane)
 - [Acknowledgements](#acknowledgements)
 
 # Introduction to Openlane and sky130 PDK
@@ -82,3 +83,6 @@ Below are the stages and respective tools called by openlane during the flow :
 * #### GDSII Generation
   * Streams out the final GDSII layout file from the routed def `Magic` 
 
+# Build and Invoke Openlane 
+
+Detailed description on how to build and invoke openlane is given [here](https://github.com/nickson-jose/openlane_build_script).
