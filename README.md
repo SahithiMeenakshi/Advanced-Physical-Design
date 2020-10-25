@@ -108,7 +108,7 @@ Detailed description on how to build and invoke openlane is given [here](https:/
 
 # Build your Design in openlane
 
- * Invoke openlane and run the script file in an interacttive (step by step)mode.
+ * Invoke openlane and run the script file in an interactive (step by step)mode.
  
    `./flow.tcl -interactive`
 
@@ -129,7 +129,7 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  * Design specific config.tcl file overrides the parameter values which are from default openlane flow configuration file.
  * Now design setup stage is to be done so that a seperate filesystem is created specific to the flow.
   
-  `prep -design picorv32a`
+   `prep -design picorv32a`
  
  * After preparation step is done:
  
@@ -137,7 +137,7 @@ Detailed description on how to build and invoke openlane is given [here](https:/
   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/preparation.png' alt='preparation step'/>
  </div>
  
- * Now  <time-stamp> or <tag> folder is created under 'runs' directory which contains results,reports,logs of each stage.
+ * Now  '<time-stamp>' or '<tag>' folder is created under 'runs' directory which contains results,reports,logs of each stage.
   
 ## Synthesis
 
