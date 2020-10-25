@@ -195,6 +195,21 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  </div>
  
  * So above indicates that default openlane configuration parameters have been overridden by parameters that are included in design specific config file.
+ * Below snapshot shows the die area after the floorplan step in which the coordinates can be read as(Lower left X value, Lower left Y value)(Upper right X value, Uower right Y value).
+ 
+ <div align="center">
+  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/die_area.png' alt='Die area after floorplan'/>
+ </div>
+ 
+ * To see the Layout after Floorplan stage ,launch Magic from designs/picorv32a/runs/timestamp of recent run/results/floorplan location. Magic tech file, lef file,def file are read to display the layout using the following command.
+ 
+   `magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &`
+  
+ * As Input ouput pin mode is set as '1' ,pins areplaced at random but at equidistant points.This can be seen in below snapshot. 
+ 
+ <div align="center">
+  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/floorplan_layout.png' alt='Layout after floorplan'/>
+ </div>
 
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
