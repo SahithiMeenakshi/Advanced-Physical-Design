@@ -247,6 +247,18 @@ Detailed description on how to build and invoke openlane is given [here](https:/
    <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/inverter_layout.png' alt='Inverter Layout'/>
  </div>
  
+ * In the extracted spice file, change the scale according to layout grid measurements and include libraries,power supplies,input pulse and specify analysis to run.Below snapshot shows the above steps in detail.
+ 
+ <div align="center">
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/spice_file.png' alt='changes in spice file'/>
+ </div>
+ 
+ * Invoke ngspice using command `ngspice sky130_inv.spice` . Below snapshot shows plots in ngspice.
+ 
+ <div align="center">
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/ngspice.png' alt='ngspice plots'/>
+ </div>
+ 
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
 - [Nickson Jose](https://github.com/nickson-jose)
