@@ -44,7 +44,7 @@ The below flow chart gives a better picture of physical design flow.
   
   * #### Routing 
     * During this step, interconnects are implemented using available metal layers , routing grid is formed using metal tracks.Routing is done in two stages                                       1) Global routing - Generates Routing guides 
-                                             2) Detailed routing - This routes within the proprocessed route guides provided from Global routing step
+                                             2) Detailed routing - This routes within the proprocessed route guides provided from Global routing step.
     So routing basically finds out the best possible connection between two end points ,one being the source and the other being target. 
   
   * #### Sign Off 
