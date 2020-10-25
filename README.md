@@ -18,11 +18,13 @@ More details on sky130 PDK can be obtained [here](https://github.com/google/skyw
  
 # Overview of Physical Design Flow
 
-The Backend flow is transforms the RTL circuit description into a physical design,composed by gates and its interconnections.The below flow chart gives a better picture of physical design flow.
+The Backend flow is transforms the RTL circuit description into a physical design,composed by gates and its interconnections.
+The below flow chart gives a better picture of physical design flow.
 
 <div align="center">
  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/asic_flow.png' alt='ASIC Flow'/>
 </div>
+
   * Synthesis - During synthesis the RTL description is converted into a structural gate level based netlist which instantiates standard cells and macros that compose the circuit and its connections.In this step,Translation + Optimization + Mapping are performed.
  
   * Floor/Power Planning - During this step, 1) Width and height of core, Die are defined
