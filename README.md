@@ -26,7 +26,7 @@ The below flow chart gives a better picture of physical design flow.
  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/asic_flow.png' alt='ASIC Flow'/>
 </div>
 
-  * ####Synthesis - During synthesis the RTL description is converted into a structural gate level based netlist which instantiates standard cells and macros that compose the circuit and its connections.In this step,Translation + Optimization + Mapping are performed.
+  * #### Synthesis - During synthesis the RTL description is converted into a structural gate level based netlist which instantiates standard cells and macros that compose the circuit and its connections.In this step,Translation + Optimization + Mapping are performed.
  
   * Floor/Power Planning - During this step, 1) Width and height of core, Die are defined
                                              2) Location of preplaced cells is defined and these cells are surrounded with Decoupling capacitors
