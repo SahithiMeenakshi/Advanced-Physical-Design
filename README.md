@@ -108,10 +108,14 @@ Detailed description on how to build and invoke openlane is given [here](https:/
 
 # Build your Design in openlane
 
- * Invoke openlane and run the script file in an intercative (step by step)mode.
+ * Invoke openlane and run the script file in an interacttive (step by step)mode.
+ 
    `./flow.tcl -interactive`
- * Input the packages needed to run this flow
-   `package require openlane 0.9
+
+* Input the packages needed to run this flow.
+ 
+   `package require openlane 0.9`
+ 
  * Below image shows the terminal after openlane being invoked.
  
  <div align="center">
@@ -123,10 +127,20 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  * openlane has close to 30-40 designs, of which one can select any design and run it. 'picorv32a' design is chosen here for example.
  * Any design comprises of files such as 'src' which contains verilog netlist(.v file) , constraints(.sdc) file and 'config.tcl' which is specific to design. 
  * Design specific config.tcl file overrides the parameter values which are from default openlane flow configuration file.
- * Now design setup stage is to be done so that a seperate filesystem is created specific to the flow
-   `prep -design picorv32a`
+ * Now design setup stage is to be done so that a seperate filesystem is created specific to the flow.
+  
+  `prep -design picorv32a`
+ 
  * After preparation step is done:
  
  <div align="center">
   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/preparation.png' alt='preparation step'/>
  </div>
+ 
+ * Now  <time-stamp> or <tag> folder is created under 'runs' directory which contains results,reports,logs of each stage.
+  
+## Synthesis
+
+ * Now run the synthesis using the command
+ 
+   `run_synthesis`
