@@ -195,4 +195,7 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  </div>
  
  * So above indicates that default openlane configuration parameters have been overridden by parameters that are included in design specific config file.
- 
+
+# Acknowledgements
+- [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
+- [Nickson Jose](https://github.com/nickson-jose)
