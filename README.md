@@ -8,6 +8,7 @@ This repository contains all the information needed on SoC design planning in Op
 - [Introduction to Openlane Flow](#introduction-to-openlane-flow)
   - [Opensource Tools](#opensource-tools)
 - [Build and Invoke Openlane](#build-and-invoke-openlane)
+- [openlane Directory structure](#openlane-directory-structure)
 - [Acknowledgements](#acknowledgements)
 
 # Introduction to Openlane and sky130 PDK
@@ -38,7 +39,7 @@ The below flow chart gives a better picture of physical design flow.
                                              4) Pin placement, logical cell placement blockage is done
                                              
   * #### Placement 
-    * During this step, netlist is binded with physical cells and these are placed on floorplan rows aligned with the sites.
+    * During this step, netlist is binded with physical cells and these are placed on floorplan rows aligned with the sites.Standard cell placement happens here.
   
   * #### Clock Tree Synthesis 
     * During this step, a clock distribution network is created to deliver clock to all the sequential elements with minimum skew.
@@ -87,9 +88,16 @@ Below are the stages and respective tools called by openlane during the flow :
 
 Detailed description on how to build and invoke openlane is given [here](https://github.com/nickson-jose/openlane_build_script).
 
-# openLANE Output
+# openlane Directory structure
+ * Process Design kits generally contains information of timing libraries, cell lef,tech lef,basic building blocks description etc., The below picture describes the PDK directory flow.
 
-Any output run data is placed by default under ./designs/design_name/runs folder. Each flow cycle will output timestamp-marked folder which contains the following files.The below picture lists all the files.
+<div align="center">
+ <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/pdk_flow.png' alt='PDK directory structure'/>
+</div>
+
+libs.ref file contents are specific to technology whereas libs.tech file contents are specific to tool.While implementing this physical design flow, `Sky130 nm` technology node ,`sky130_fd_sc_hd` standard cell library are used.
+
+ * Any output run data is placed by default under ./designs/design_name/runs folder. Each flow cycle will output timestamp-marked folder which contains the following files.The below picture lists all the files.
 
 <div align="center">
  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/output_file.png' alt='Output files structure'/>
