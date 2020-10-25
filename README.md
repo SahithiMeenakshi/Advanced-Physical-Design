@@ -58,10 +58,27 @@ The below flow chart provides a better picture of Openlane flow as a whole.[(Ima
  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/openlane_flow.png' alt='Openlane Flow'/>
 </div>
 
-### Opensource Tools
+## Opensource Tools
 
 Below are the stages and respective tools called by openlane during the flow :
 
-* Synthesis
+* #### Synthesis
   * Generates gate-level netlist `yosys`
+  * Performs Cell mapping `abc`
+  * Performs pre-layout STA `OpenSTA`
+* #### Floorplanning
+  * Defines the core area for the macro as well as the rows and the tracks `init_fp`
+  * Places the macro input and output ports `ioplacer`
+  * Generates the power distribution network `pdn`
+* #### Placement
+  * Performs Global placement `RePlace`
+  * Performs detailed placement to legalize the globally placed components `OpenDP`
+* #### Clock Tree Synthesis
+  * Synthesizes the clock distribution network `TritonCTS`
+* #### Routing
+  * Performs Global routing to generate guide file `FastRoute`
+  * Performs Detailed routing `TritonRoute`
+  * Performs SPEF extraction `SPEF-Extractor`
+* #### GDSII Generation
+  * Streams out the final GDSII layout file from the routed def `Magic` 
 
