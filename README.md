@@ -89,7 +89,7 @@ Below are the stages and respective tools called by openlane during the flow :
 Detailed description on how to build and invoke openlane is given [here](https://github.com/nickson-jose/openlane_build_script).
 
 # openlane Directory structure
- * Process Design kits generally contains information of timing libraries, cell lef,tech lef,basic building blocks description etc., The below picture describes the PDK directory flow.
+ * Process Design kits generally contains information of timing libraries for different process corners, cell lef,tech lef,basic building blocks description etc., The below picture describes the PDK directory flow.
 
 <div align="center">
  <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/pdk_flow.png' alt='PDK directory structure'/>
