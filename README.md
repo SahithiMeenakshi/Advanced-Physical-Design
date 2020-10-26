@@ -17,6 +17,7 @@ This repository contains all the information needed on SoC design planning in Op
 - [Standard cell design & characterization](#[standard-cell-design-&-characterization)
   - [Extracting lef file from .mag file](#extracting-lef-file-from-.mag-file)
   - [Plugging Custom LEF to openlane flow](#plugging-custom-lef-to-openlane-flow)
+- [Adjusting the timing violation](#adjusting-the-timing-violation)
 - [Acknowledgements](#acknowledgements)
 
 # Introduction to Openlane and sky130 PDK
@@ -335,7 +336,11 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  <div align="center">
    <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/slack_after_synthesis.png' alt='slack after synthesis stage'/>
  </div>
- 
+
+# Adjusting the timing violation
+
+* Slack should be either zero or positive for a good design. so , the negative slack needs to be corrected.
+* 'SYNTH_STRATEGY' is a switch of synthesis stage through which one can strike a balance between delay and area,set this switch to a value for which delay is minimized. 
  
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
