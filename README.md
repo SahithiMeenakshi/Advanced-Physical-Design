@@ -71,27 +71,7 @@ The below flow chart provides a better picture of Openlane flow as a whole.[(Ima
 
 ## Opensource Tools at each step
 
-Below are the stages and respective tools called by openlane during the flow :
-
-* #### Synthesis
-  * Generates gate-level netlist `yosys`
-  * Performs Cell mapping `abc`
-  * Performs pre-layout STA `OpenSTA`
-* #### Floorplanning
-  * Defines the core area for the macro as well as the rows and the tracks `init_fp`
-  * Places the macro input and output ports `ioplacer`
-  * Generates the power distribution network `pdn`
-* #### Placement
-  * Performs Global placement `RePlace`
-  * Performs detailed placement to legalize the globally placed components `OpenDP`
-* #### Clock Tree Synthesis
-  * Synthesizes the clock distribution network `TritonCTS`
-* #### Routing
-  * Performs Global routing to generate guide file `FastRoute`
-  * Performs Detailed routing `TritonRoute`
-  * Performs SPEF extraction `SPEF-Extractor`
-* #### GDSII Generation
-  * Streams out the final GDSII layout file from the routed def `Magic` 
+For the openlane design stages and the Tools that are called by openlane flow at each stage along with description, refer this [link](https://github.com/efabless/openlane)
 
 # Build and Invoke Openlane 
 
@@ -340,8 +320,9 @@ Detailed description on how to build and invoke openlane is given [here](https:/
 # Adjusting the timing violation
 
 * Slack should be either zero or positive for a good design. so , the negative slack needs to be corrected.
-* 'SYNTH_STRATEGY' is a switch of synthesis stage through which one can strike a balance between delay and area,set this switch to a value for which delay is minimized. 
+* 'SYNTH_STRATEGY' is a switch of synthesis stage through which one can strike a balance between delay and area,set this switch to a value for which delay is minimized. It can be set using the following line. `set ::env(SYNTH_STRATEGY) 1`.
+* Also set the cell upsizing/downsizing mode by using the following line  `set ::env(SYNTH_SIZING) 1` and then run synthesis again. Now, slack becomes better than before.
  
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
-- [Nickson Jose](https://github.com/nickson-jose)
+- [Nickson P Jose](https://github.com/nickson-jose)
