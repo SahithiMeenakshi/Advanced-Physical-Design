@@ -14,8 +14,8 @@ This repository contains all the information needed on SoC design planning in Op
   - [Synthesis](#synthesis)
   - [Floorplan](#floorplan)
   - [Placement](#placement)
-- [Standard cell design & characterization](#standard-cell-design-&-characterization)
-  - [Extracting lef file from .mag file](#extracting-lef-file-from-.mag-file)
+- [Standard cell design and characterization](#standard-cell-design-and-characterization)
+  - [Extracting lef file from magic file](#extracting-lef-file-from-magic-file)
   - [Plugging Custom LEF to openlane flow](#plugging-custom-lef-to-openlane-flow)
 - [Adjusting the timing violation](#adjusting-the-timing-violation)
 - [openlane flow after plugging custom cell](#openlane-flow-after-plugging-custom-cell)
@@ -220,7 +220,7 @@ Detailed description on how to build and invoke openlane is given [here](https:/
    <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/placement_layout.png' alt='Layout after Placement'/>
   </div>
 
-# Standard cell design & characterization
+# Standard cell design and characterization
 
  * Clone the following [link](https://github.com/nickson-jose/vsdstdcelldesign) into openLANE_flow directory which contains custom made .mag inverter file and also pmos,nmos sky130 spice models.
  * Launch Magic from vsdstdcelldesign location using the command `magic -T sky130.tech sky130_inv.mag &`
@@ -242,7 +242,7 @@ Detailed description on how to build and invoke openlane is given [here](https:/
    <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/ngspice.png' alt='ngspice plots'/>
  </div>
  
- ## Extracting lef file from .mag file
+ ## Extracting lef file from magic file
  
  * Before extracting lef file, certain definitions need to be set to the pins of the cell.As the ports are the declared as pins of the macro in LEF files, defining port and setting correct class and use attributes to each port is the first step.
  * In Magic Layout window, first source the .mag file of inverter and then goto `Edit >> Text` which opens up a dialogue box. Below image is a snapshot of this.
