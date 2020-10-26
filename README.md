@@ -333,7 +333,7 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  </div>
  
  <div align="center">
-   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/slack_after_inverter_in_flow.png' alt='slack after synthesis stage'/>
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/slack_after_synthesis.png' alt='slack after synthesis stage'/>
  </div>
  
  
