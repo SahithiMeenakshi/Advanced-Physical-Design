@@ -16,6 +16,7 @@ This repository contains all the information needed on SoC design planning in Op
   - [Placement](#placement)
 - [Standard cell design & characterization](#[standard-cell-design-&-characterization)
   - [Extracting lef file from .mag file](#extracting-lef-file-from-.mag-file)
+  - [Plugging Custom LEF to openlane flow](#plugging-custom-lef-to-openlane-flow)
 - [Acknowledgements](#acknowledgements)
 
 # Introduction to Openlane and sky130 PDK
@@ -286,7 +287,43 @@ Detailed description on how to build and invoke openlane is given [here](https:/
    <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/lef_file.png' alt='LEF file'/>
  </div>
 
+ ## Plugging Custom LEF to openlane flow
  
+ * Copy LEF file, library files to `src` folder location as shown in figures below.
+ 
+ <div align="center">
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/copy_lef.png' alt='LEF file copying'/>
+ </div>
+ 
+ <div align="center">
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/copy_lib.png' alt='LIB files copying'/>
+ </div>
+ 
+ * In the design's config.tcl file add the libraries and also add the below line to point to the lef location which is required during spice extraction.
+   `set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]`.
+ * Below is the snapshot of config.tcl file after modifications.
+ 
+ <div align="center">
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/config_file.png' alt='design config file'/>
+ </div>
+ 
+ * Now invoke the openlane in interactive mode, import the packages required and go through design preparation stage using commands one by one.
+  
+  `./flow.tcl -interactive`
+  
+  `package require openlane 0.9`
+  
+  `prep -design picorv32a`
+ * Add the below commands to include LEF into the openlane flow.
+   `set lefs [glob $::env(DESIGN_DIR)/src/*.lef]`
+  
+   `add_lefs -src $lefs`
+   
+ * Below is the snapshot of these steps.
+ 
+ <div align="center">
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/lef_preparation.png' alt='preparation stage after LEF in flow'/>
+ </div>
  
  
 # Acknowledgements
