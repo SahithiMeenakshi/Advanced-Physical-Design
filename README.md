@@ -240,7 +240,6 @@ Detailed description on how to build and invoke openlane is given [here](https:/
 # Standard cell design & characterization
 
  * Clone the following [link](https://github.com/nickson-jose/vsdstdcelldesign) into openLANE_flow directory which contains custom made .mag inverter file and also pmos,nmos sky130 spice models.
- 
  * Launch Magic from vsdstdcelldesign location using the command `magic -T sky130.tech sky130_inv.mag &`
  * To extract parasitic capacitances, first do `extract all` and then `ext2spice cthresh 0 rthresh 0` and finally `ext2spice`.Below is the snapshot of all these steps.
  
@@ -269,7 +268,7 @@ Detailed description on how to build and invoke openlane is given [here](https:/
    <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/define_port.png' alt='Defining ports of inverter'/>
  </div>
  
- * To create port definition and setting 'port class' and 'port use' attributes follow the steps from[here](https://github.com/nickson-jose/vsdstdcelldesign).
+ * To create port definition and setting 'port class' and 'port use' attributes follow the steps from [here](https://github.com/nickson-jose/vsdstdcelldesign).
  * Convert grids to tracks from the information availbale in tracks.info file at the loaction specified in the terminal. Below are the images of tracks info file and command to convert grids to tracks.Finally save this file using command `save sky130_vsdinv.mag`.
  
  <div align="center">
@@ -281,8 +280,11 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  </div>
  
  * Now invoke magic tool using command `magic -T sky130A.tech sky130_vsdinv.mag &`.
- * Now to extract lef file , use command `lef write` in magic layout command window.
+ * Now to extract lef file , use command `lef write` in magic layout command window. Below is the image of LEF file contents.
  
+ <div align="center">
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/lef_file.png' alt='LEF file'/>
+ </div>
 
  
  
