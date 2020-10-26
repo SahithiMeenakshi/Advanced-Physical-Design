@@ -309,11 +309,11 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  
  * Now invoke the openlane in interactive mode, import the packages required and go through design preparation stage using commands one by one.
   
-  `./flow.tcl -interactive`
+   `./flow.tcl -interactive`
   
-  `package require openlane 0.9`
-  
-  `prep -design picorv32a`
+   `package require openlane 0.9`
+   
+   `prep -design picorv32a`
  * Add the below commands to include LEF into the openlane flow.
    `set lefs [glob $::env(DESIGN_DIR)/src/*.lef]`
   
@@ -323,6 +323,17 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  
  <div align="center">
    <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/lef_preparation.png' alt='preparation stage after LEF in flow'/>
+ </div>
+ 
+ * To make sure that the custom inverter has included in this picorv32a design flow ,run synthesis using command `run_synthesis`.
+ * Below images show the instances of custom made inverter being included in synthesis flow and the slack after this synthesis stage.
+ 
+ <div align="center">
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/custom_inv_instance.png' alt='Inverter instance in synthesis flow'/>
+ </div>
+ 
+ <div align="center">
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/slack_after_inverter_in_flow.png' alt='slack after synthesis stage'/>
  </div>
  
  
