@@ -18,6 +18,7 @@ This repository contains all the information needed on SoC design planning in Op
   - [Extracting lef file from .mag file](#extracting-lef-file-from-.mag-file)
   - [Plugging Custom LEF to openlane flow](#plugging-custom-lef-to-openlane-flow)
 - [Adjusting the timing violation](#adjusting-the-timing-violation)
+- [openlane flow after plugging custom cell](#openlane-flow-after-plugging-custom-cell)
 - [Acknowledgements](#acknowledgements)
 
 # Introduction to Openlane and sky130 PDK
@@ -321,8 +322,29 @@ Detailed description on how to build and invoke openlane is given [here](https:/
 
 * Slack should be either zero or positive for a good design. so , the negative slack needs to be corrected.
 * 'SYNTH_STRATEGY' is a switch of synthesis stage through which one can strike a balance between delay and area,set this switch to a value for which delay is minimized. It can be set using the following line. `set ::env(SYNTH_STRATEGY) 1`.
-* Also set the cell upsizing/downsizing mode by using the following line  `set ::env(SYNTH_SIZING) 1` and then run synthesis again. Now, slack becomes better than before.
+* Also set the cell upsizing/downsizing mode by using the following line  `set ::env(SYNTH_SIZING) 1` and then run synthesis again. 
  
+# openlane flow after plugging custom cell
+
+* Run synthesis after modifying few switches needed to correct the slack . Below image reports slack after synthesis stage.
+ 
+ <div align="center">
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/slack_repair.png' alt='slack after synthesis stage'/>
+ </div>
+ 
+ * Run floorplan and then placement step.Below is the image after placement stage.
+ 
+ <div align="center">
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/placement_plugging_inv.png' alt='placement results after plugging custom cell'/>
+ </div>
+ 
+ * Now launch Magic from designs/picorv32a/runs/timestamp of recent run/results/placement location using the command specified in `placement` step above to check whether custom cell(inverter here) has been included in openlane flow of 'picorv32a' design here.
+ * In the below image, sky130_vsdinv has been highlighted in layout which indicates that it has been incorporated in the flow.
+ 
+  <div align="center">
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/inv_in_layout.png' alt='custom cell in layout'/>
+  </div>
+
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
 - [Timothy Edwards](https://github.com/RTimothyEdwards), Founder, Opencircuitdesign.com
