@@ -15,6 +15,7 @@ This repository contains all the information needed on SoC design planning in Op
   - [Floorplan](#floorplan)
   - [Placement](#placement)
 - [Standard cell design & characterization](#[standard-cell-design-&-characterization)
+  - [Extracting lef file from .mag file](#extracting-lef-file-from-.mag-file)
 - [Acknowledgements](#acknowledgements)
 
 # Introduction to Openlane and sky130 PDK
@@ -241,7 +242,7 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  * Clone the following [link](https://github.com/nickson-jose/vsdstdcelldesign) into openLANE_flow directory which contains custom made .mag inverter file and also pmos,nmos sky130 spice models.
  
  * Launch Magic from vsdstdcelldesign location using the command `magic -T sky130.tech sky130_inv.mag &`
- * To extract parasitic capacitances, first do `extract all` and then `ext2spice cthresh 0 rthresh 0` to extract parasitic capacitances and finally `ext2spice`.Below is the snapshot of all these steps.
+ * To extract parasitic capacitances, first do `extract all` and then `ext2spice cthresh 0 rthresh 0` and finally `ext2spice`.Below is the snapshot of all these steps.
  
  <div align="center">
    <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/inverter_layout.png' alt='Inverter Layout'/>
@@ -258,6 +259,33 @@ Detailed description on how to build and invoke openlane is given [here](https:/
  <div align="center">
    <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/ngspice.png' alt='ngspice plots'/>
  </div>
+ 
+ ## Extracting lef file from .mag file
+ 
+ * Before extracting lef file, certain definitions need to be set to the pins of the cell.As the ports are the declared as pins of the macro in LEF files, defining port and setting correct class and use attributes to each port is the first step.
+ * In Magic Layout window, first source the .mag file of inverter and then goto `Edit >> Text` which opens up a dialogue box. Below image is a snapshot of this.
+ 
+ <div align="center">
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/define_port.png' alt='Defining ports of inverter'/>
+ </div>
+ 
+ * To create port definition and setting 'port class' and 'port use' attributes follow the steps from[here](https://github.com/nickson-jose/vsdstdcelldesign).
+ * Convert grids to tracks from the information availbale in tracks.info file at the loaction specified in the terminal. Below are the images of tracks info file and command to convert grids to tracks.Finally save this file using command `save sky130_vsdinv.mag`.
+ 
+ <div align="center">
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/tracks_file.png' alt='Tracks file'/>
+ </div>
+ 
+ <div align="center">
+   <img src='https://github.com/SahithiMeenakshi/Advanced-Physiscal-Design/blob/main/Images/grid_conversion.png' alt='Grids to Tracks'/>
+ </div>
+ 
+ * Now invoke magic tool using command `magic -T sky130A.tech sky130_vsdinv.mag &`.
+ * Now to extract lef file , use command `lef write` in magic layout command window.
+ 
+
+ 
+ 
  
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
